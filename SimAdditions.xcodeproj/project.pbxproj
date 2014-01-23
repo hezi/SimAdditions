@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E7B507CE189152A900E61818 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B507CD189152A900E61818 /* Cocoa.framework */; };
 		E7B507D8189152A900E61818 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7B507D6189152A900E61818 /* InfoPlist.strings */; };
+		E7B507E11891546C00E61818 /* SimAdditionsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B507E01891546C00E61818 /* SimAdditionsPlugin.m */; };
+		E7B507E4189156E600E61818 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B507E3189156E600E61818 /* JRSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,10 @@
 		E7B507D5189152A900E61818 /* SimAdditions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimAdditions-Info.plist"; sourceTree = "<group>"; };
 		E7B507D7189152A900E61818 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E7B507D9189152A900E61818 /* SimAdditions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimAdditions-Prefix.pch"; sourceTree = "<group>"; };
+		E7B507DF1891546C00E61818 /* SimAdditionsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimAdditionsPlugin.h; sourceTree = "<group>"; };
+		E7B507E01891546C00E61818 /* SimAdditionsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimAdditionsPlugin.m; sourceTree = "<group>"; };
+		E7B507E2189156E600E61818 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		E7B507E3189156E600E61818 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				E7B507D4189152A900E61818 /* Supporting Files */,
+				E7B507DF1891546C00E61818 /* SimAdditionsPlugin.h */,
+				E7B507E01891546C00E61818 /* SimAdditionsPlugin.m */,
+				E7B507E2189156E600E61818 /* JRSwizzle.h */,
+				E7B507E3189156E600E61818 /* JRSwizzle.m */,
 			);
 			path = SimAdditions;
 			sourceTree = "<group>";
@@ -150,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B507E4189156E600E61818 /* JRSwizzle.m in Sources */,
+				E7B507E11891546C00E61818 /* SimAdditionsPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,10 +251,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(USER_LIBRARY_DIR)/Application Support/SIMBL/Plugins";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimAdditions/SimAdditions-Prefix.pch";
 				INFOPLIST_FILE = "SimAdditions/SimAdditions-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SIMBL/Plugins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -255,7 +268,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimAdditions/SimAdditions-Prefix.pch";
 				INFOPLIST_FILE = "SimAdditions/SimAdditions-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SIMBL/Plugins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
